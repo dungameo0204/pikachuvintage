@@ -3,20 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pikachu Cổ Điển - Modular</title>
+    <title>Pikachu Cổ Điển - Level Up</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <div class="container">
         <h1>Pikachu Cổ Điển</h1>
-        <div class="stats">
-            <span>Điểm: <b id="score">0</b></span>
-            <button onclick="startGame()">Chơi lại</button>
+        
+        <div class="hud">
+            <div class="stat-box">Level: <b id="level">1</b></div>
+            <div class="stat-box">Điểm: <b id="score">0</b></div>
+        </div>
+
+        <div class="progress-container">
+            <div id="time-bar" class="progress-bar"></div>
         </div>
         
         <div id="game-board"></div>
-        <div id="message"></div>
+    </div>
+
+    <div id="game-over-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="modal-title">HẾT GIỜ!</h2>
+            <p>Bạn dừng chân tại Level <span id="final-level">0</span></p>
+            <p class="final-score">Điểm số: <span id="final-score">0</span></p>
+            <button onclick="startGame()">Chơi Lại Từ Đầu</button>
+        </div>
     </div>
 
     <script src="js/constants.js"></script>
